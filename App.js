@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Greeting from './src/components/Greeting';
+import Input from './src/components/Input';
+import Layout from './src/components/Layout';
+import List from './src/components/List';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+
+class App extends Component {
+constructor () {
+  super();
+  this.state = {
+    greeting: 'Selamat Datang. Welcome To React Native.....'
+  }
+}
+
+componentDidMount() {
+}
+  render() {
+    return (
+     // <Layout/>
+     <List/>
+
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -17,3 +33,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
